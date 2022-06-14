@@ -13,6 +13,9 @@ class KoreaEntry: UITableViewController {
         
         tableView.delegate = self
         tableView.dataSource = self
+        
+        let nibName = UINib(nibName: "CustomCell", bundle: nil)
+        tableView.register(nibName, forCellReuseIdentifier: "CustomCell")
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
